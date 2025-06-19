@@ -1,2 +1,10 @@
-Please add your pseudocode to this file
+The solution loops through the string and builds every possible consecutive substring. 
+
+I used two loops: 
+- one to set the starting point, 
+- and another to create substrings from that point moving forward.
+
+This way, I get all the consecutive chunks, in the order they appear, without skipping any characters.
+
+The time complexity is O(n²) since I'm looking at every combo of start and end positions. It's not the most efficient for really long strings, but it's totally fine for short or medium ones.
 And a written explanation of your solution
