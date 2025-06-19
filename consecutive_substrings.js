@@ -1,7 +1,5 @@
 function consecutiveSubstrings(string) {
   // type your code here
-}
-function consecutiveSubstrings(string) {
   const result = [];
 
   for (let start = 0; start < string.length; start++) {
