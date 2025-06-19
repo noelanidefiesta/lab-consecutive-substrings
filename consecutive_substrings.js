@@ -4,11 +4,8 @@ function consecutiveSubstrings(string) {
 function consecutiveSubstrings(string) {
   const result = [];
 
-  // Loop through each starting character in the string
   for (let start = 0; start < string.length; start++) {
-    // For each starting point, build all substrings that follow it
     for (let end = start + 1; end <= string.length; end++) {
-      // Grab the substring and push it to our result array
       result.push(string.slice(start, end));
     }
   }
@@ -35,13 +32,13 @@ if (require.main === module) {
 module.exports = consecutiveSubstrings;
 
 /*
-  What’s going on:
-  - We're using two loops to go through every possible "start" and "end" position in the string.
-  - For each combo, we use .slice() to get the substring and add it to our result list.
+  Explanation:
+  - I used two nested loops.
+    Outer loop picks the starting index.
+    Inner loop slices from start to end to get all possible substrings.
+  - Each substring is added to the result array.
 
-  Time complexity:
-  - O(n^2) because we’re slicing from every possible start and end point in the string.
-  - It’s not the most efficient in the world, but for something this small it works just fine.
-
-  TLDR: Loop over the string, build every substring, return the list!
+  Time Complexity: O(n^2)
+    - We slice every possible combination of characters.
+    - For a string of length n, the number of substrings is (n * (n + 1)) / 2.
 */
